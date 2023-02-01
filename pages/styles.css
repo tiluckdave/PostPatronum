@@ -32,7 +32,7 @@ body {
     padding: 50px;
     position: relative;
     width: auto;
-    gap: 64px;
+    gap: 24px;
 }
 
 .header {    
@@ -45,13 +45,15 @@ body {
 
 .header-title {
     display: flex;
+    align-items: center;
+    justify-content: center;
     gap: 12px;
 }
 
 .header-title h1 {
     width: 100%;
     font-weight: 700;
-    font-size: 72px;
+    font-size: 64px;
     letter-spacing: -4px;
     line-height: 1.2em;
     text-align: center;
@@ -59,8 +61,9 @@ body {
 }
 
 .header-subtitle h2 {
-    font-size: 20px;
+    font-size: 16px;
     font-style: normal;
+    text-align: center;
     font-weight: 400;
     line-height: 1.4em;
     color: rgba(255, 255, 255, 0.75);
@@ -93,7 +96,7 @@ body {
     flex: 0 0 auto;
     flex-flow: column nowrap;
     gap: 10px;
-    height: 150px;
+    height: 120px;
     overflow: hidden;
     padding: 20px;
     position: relative;
@@ -274,8 +277,6 @@ textarea {
     display: flex;
     flex: 0 0 auto;
     flex-flow: column nowrap;
-    gap: 10px;
-    height: min-content;
     max-width: 1200px;
     overflow: hidden;
     position: relative;
@@ -288,8 +289,6 @@ textarea {
     display: flex;
     flex: 0 0 auto;
     flex-flow: column nowrap;
-    gap: 16px;
-    height: min-content;
     overflow: hidden;
     padding: 0px;
     position: relative;
@@ -302,7 +301,7 @@ textarea {
     font-style: normal;
     font-weight: 800;
     letter-spacing: 0px;
-    line-height: 1.4em;
+    line-height: 1em;
     text-align: start;
     color: #ffffff;
     text-decoration: none;
