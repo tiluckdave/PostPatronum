@@ -1,7 +1,5 @@
 import Head from 'next/head';
-import Image from 'next/image';
 import { useState } from 'react';
-import buildspaceLogo from '../assets/buildspace-logo.png';
 
 const Home = () => {
   const [ userInput, setUserInput ] = useState('');
@@ -12,19 +10,20 @@ const Home = () => {
     setIsGenerating(true);
 
     console.log("Calling OpenAI...")
-    const response = await fetch('/api/generate', {
+    const response = await fetch('https://pp.tiluckdave.repl.co', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ userInput }),
+      body: JSON.stringify({ 'prompt': userInput }),
     });
+
 
     const data = await response.json();
     const { output } = data;
-    console.log("OpenAI replied...", output.text)
+    console.log("OpenAI replied...", output)
 
-    setApiOutput(`${output.text}`);
+    setApiOutput(`${output}`);
     setIsGenerating(false);
   }
 
